@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Web Layout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">Header</header>
+        <div class="banner">Banner</div>
+        <div class="sub-banner">Sub-Banner</div>
+        <aside class="left-aside">Left Aside</aside>
+        <main class="main-content">Main Content</main>
+        <aside class="right-aside">
+            
+        </aside>
+        <div class="low-content">Low Content</div>
+        <footer class="footer">Footer</footer>
+        <div class="secondary-footer">Secondary Footer</div>
+    </div>
+</body>
+
+<style>
+
+    /* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "banner banner banner"
+        "sub-banner sub-banner sub-banner"
+        "left-aside main-content right-aside"
+        "low-content low-content low-content"
+        "footer footer footer"
+        "secondary-footer secondary-footer secondary-footer";
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: auto 50px 50px auto 60px 70px 50px;
+    height: 100vh;
+}
+
+/* Area styles */
+.header {
+    grid-area: header;
+    background-color: #f4a261;
+    text-align: center;
+    padding: 20px;
+}
+
+.banner {
+    grid-area: banner;
+    background-color: #e76f51;
+    text-align: center;
+    padding: 20px;
+}
+
+.sub-banner {
+    grid-area: sub-banner;
+    background-color: #8ecae6;
+    text-align: center;
+    padding: 20px;
+}
+
+.left-aside {
+    grid-area: left-aside;
+    background-color: #2a9d8f;
+    padding: 20px;
+}
+
+.main-content {
+    grid-area: main-content;
+    background-color: #457b9d;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.right-aside {
+    grid-area: right-aside;
+    background-color: #e9c46a;
+    padding: 20px;
+}
+
+.low-content {
+    grid-area: low-content;
+    background-color: #2a9d8f;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #457b9d;
+    text-align: center;
+    padding: 20px;
+}
+
+.secondary-footer {
+    grid-area: secondary-footer;
+    background-color: #264653;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</html>
